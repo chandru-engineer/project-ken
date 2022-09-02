@@ -78,14 +78,11 @@ WSGI_APPLICATION = 'main.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ken_app', 
-        'USER': 'root',  
-        'PASSWORD': 'root', 
-        'HOST': '127.0.0.1',  
+        'NAME': '2xCQTgSOEc', 
+        'USER': '2xCQTgSOEc',  
+        'PASSWORD': '6ZKVa91Jga', 
+        'HOST': 'remotemysql.com',  
         'PORT': '3306',  
-        'OPTIONS': {  
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"  
-        }  
     }
 }
 
