@@ -1,0 +1,55 @@
+<h1> Order Form page </h1>
+
+<form action="" method="post">
+
+    {% csrf_token %}
+    <h1>Chicken</h1>
+
+    <label for="quantity">Quantity in kg</label>
+    <input type="number" id="quantity" name="quantity">
+    <p>choose any category</p>
+    <input type="radio" id="boneless" name="category" value="Boneless">
+    <label for="boneless">Bone Less</label><br>
+    <input type="radio" id="normal" name="category" value="Normal" checked>
+    <label for="normal">Normal</label><br>
+    <input type="radio" id="leg" name="category" value="LegOnly">
+    <label for="leg">Leg-Only</label><br><br>
+    <p>Cutting type</p>
+    <input type="radio" id="small" name="cutting" value="Small">
+    <label for="small">Small Piece</label><br>
+    <input type="radio" id="medium" name="cutting" value="Medium" checked>
+    <label for="medium">Medium Peice</label><br>
+    <input type="radio" id="large" name="cutting" value="Large">
+    <label for="large">Large Piece</label><br><br>
+
+
+    <h1>Mutton</h1>
+    <label for="goat_quantity">Quantity in kg</label>
+    <input type="number" id="goat_quantity" name="goat_quantity">
+    <p>choose any category</p>
+
+    <input type="radio" id="bone" name="goat_category" value="Bone">
+    <label for="bone">Bone-Only</label><br>
+    <input type="radio" id="meat" name="goat_category" value="Meat" checked>
+    <label for="meat">Normal Meat</label><br>
+    <input type="radio" id="leg_bone" name="goat_category" value="LegOnly">
+    <label for="leg_bone">Leg-Bone</label><br><br>
+    <input type="radio" id="blood" name="goat_category" value="blood">
+    <label for="blood">Blood</label><br><br>
+
+    <p>Cutting type</p>
+    <input type="radio" id="small" name="goat_cutting" value="Small">
+    <label for="small">Small Piece</label><br>
+    <input type="radio" id="medium" name="goat_cutting" value="Medium" checked>
+    <label for="medium">Medium Peice</label><br>
+    <input type="radio" id="large" name="goat_cutting" value="Large">
+    <label for="large">Large Piece</label><br><br>
+
+
+
+
+
+    <input type="date" name="date" required> Devivery date:<br><br>
+    <input type="submit" value="Submit">
+</form>
+
