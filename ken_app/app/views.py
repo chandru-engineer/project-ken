@@ -50,4 +50,6 @@ def order(request):
 
 
 def test(request):
-    return render(request, 'navbar.html')
+    return render(request, 'test.html')
+
+

@@ -25,7 +25,8 @@ SECRET_KEY = '43iz1*ldkj0q=*zb83@y9#e$*xa^xv-yn$ea3qt85f9x#3(6%0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["192.168.1.21"]
+# ALLOWED_HOSTS = ["192.168.1.21"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -75,16 +76,30 @@ WSGI_APPLICATION = 'main.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': '2xCQTgSOEc', 
-        'USER': '2xCQTgSOEc',  
-        'PASSWORD': '6ZKVa91Jga', 
-        'HOST': 'remotemysql.com',  
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': '2xCQTgSOEc', 
+#         'USER': '2xCQTgSOEc',  
+#         'PASSWORD': '6ZKVa91Jga', 
+#         'HOST': 'remotemysql.com',  
+#         'PORT': '3306',  
+#     }
+# }
+
+DATABASES = {  
+    'default': {  
+        'ENGINE': 'django.db.backends.mysql',  
+        'NAME': 'product',  
+        'USER': 'root',  
+        'PASSWORD': 'root',  
+        'HOST': '127.0.0.1',  
         'PORT': '3306',  
-    }
-}
+        'OPTIONS': {  
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"  
+        }  
+    }  
+}  
 
 
 # Password validation
