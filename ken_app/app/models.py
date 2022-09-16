@@ -9,6 +9,7 @@ class OrderModel(models.Model):
     customer_id = models.CharField(max_length=5)
     phone_number = PhoneNumberField()
     delivery_date = models.DateField() ## dd/mm/yyyy
+    current_date = models.CharField(max_length=20)
     delivery_time = models.TimeField(auto_now_add=False, blank=False) #'hh:mm'
     order_date_time = models.DateTimeField(default = datetime.now(), blank = True)
     address = models.CharField(max_length=100)

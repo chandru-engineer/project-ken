@@ -1,5 +1,11 @@
 from django.shortcuts import render, redirect
 from .models import OrderModel
+from datetime import date
+
+def current_date():
+    today = str(date.today())
+    return today
+
 
 def home(request):
     return render(request, 'home.html')
@@ -30,6 +36,7 @@ def order(request):
             customer_id = customer_id_data,
             phone_number = phone_number,
             delivery_date = date,
+            current_date = current_date(),
             delivery_time = '08:34',
             address = address,
             chicken_kg = chicken_kg,
