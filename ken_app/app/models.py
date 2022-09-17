@@ -28,6 +28,19 @@ class OrderModel(models.Model):
     def __str__(self):
         return self.customer_name
 
+
+class Order(models.Model):
+    order_id = models.AutoField(primary_key=True)
+    order_time = models.CharField(max_length=10)
+    order_date = models.CharField(max_length=10)
+    del_time = models.CharField(max_length=15)
+    del_date = models.CharField(max_length=20)
+    # del_date = models.CharField(max_length=20)
+
+
+    def __str__(self):
+        return self.order_id
+
     
 
 
